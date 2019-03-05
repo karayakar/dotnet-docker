@@ -1,0 +1,11 @@
+steps:
+- script: >
+    echo "##vso[task.setvariable variable=imageNames.imageBuilder.windows]
+    mcr.microsoft.com/dotnet-buildtools/image-builder:nanoserver-20190301113613
+
+    echo "##vso[task.setvariable variable=imageNames.imageBuilder.linux]
+    mcr.microsoft.com/dotnet-buildtools/image-builder:debian-20190301193659
+
+    echo "##vso[task.setvariable variable=imageNames.testrunner]
+    microsoft/dotnet-buildtools-prereqs:debian-stretch-docker-testrunner-63f2145-20184325094343
+  displayName: Set Image Name variables
